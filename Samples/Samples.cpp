@@ -52,3 +52,14 @@ int main()
 // Add a Column Indicator at column 120
 	// Download and enable "Editor Guidlines" extension
 	// Add guideline via right-click->Guidelines->Add Guideline (adds where cursor is)
+
+/** GIT SETTINGS */
+// # Remove everything from the index
+// $ git rm --cached - r .
+
+// # Re - add all the deleted files to the index
+// # You should get lots of messages like : "warning: CRLF will be replaced by LF in <file>."
+// $ git diff --cached --name - only - z | xargs - 0 git add
+
+// # Commit
+// $ git commit - m "Fix CRLF"
