@@ -3,6 +3,37 @@
 int main()
 {
 	std::cout << "Hello World!\n";
+
+	// Struct example (NOTE: This is not the same as std::vector)
+	struct Vector
+	{
+		float x;
+		float y;
+		float z;
+	};
+
+	Vector vector;
+	vector.x = 20;
+	vector.y = 30;
+	vector.z = 40;
+
+	std::cout << "A 3-space vector at " << vector.x << ", " << vector.y << ", " << vector.z << std::endl;
+
+	// Pointer to Vector type
+	Vector* vectorPntr;
+	vectorPntr = &vector;
+	vectorPntr->x = 1000;
+	vectorPntr->y = 666;
+	vectorPntr->z = 444;
+
+	std::cout << vector.x << vector.y << vector.z << std::endl;
+	std::cout << "vector is stored at address: " << vectorPntr << std::endl;
+	std::cout << std::endl;
+	std::cout << "vector.x address: " << &vector.x << std::endl;
+	std::cout << "vector.y address: " << &vector.y << std::endl;
+	std::cout << "vector.z address: " << &vector.z << std::endl;
+
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
