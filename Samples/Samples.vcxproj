@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{5FA9D068-57B9-4DC6-B286-103A119F62A4}</ProjectGuid>
+    <ProjectGuid>{AAC76BFC-70E9-4FC1-89A8-33ACBC0E43E6}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Cherno</RootNamespace>
+    <RootNamespace>Samples</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -151,7 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Cherno.cpp" />
+    <ClCompile Include="Samples.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
