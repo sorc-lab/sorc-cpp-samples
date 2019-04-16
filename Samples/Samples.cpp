@@ -17,7 +17,11 @@ int main()
 	vector.y = 30;
 	vector.z = 40;
 
-	std::cout << "A 3-space vector at " << vector.x << ", " << vector.y << ", " << vector.z << std::endl;
+	// printf using %g to print floats without decimal places
+	printf("A 3-space vector at %g, %g, %g\n", vector.x, vector.y, vector.z);
+
+	std::string tmpStr = "Testing printf strings using C++ std::string";
+	printf("%s\n", tmpStr.c_str()); // must use c_str() to print strings
 
 	// Pointer to Vector type
 	Vector* vectorPntr;
@@ -33,7 +37,17 @@ int main()
 	std::cout << "vector.y address: " << &vector.y << std::endl;
 	std::cout << "vector.z address: " << &vector.z << std::endl;
 
+	// cin
+	std::cout << "What is your age?" << std::endl;
 
+	int age;
+	std::cin >> age;
+	std::cout << "You entered: " << age << std::endl;
+
+	if (!std::cin)
+	{
+		std::cout << "Invalid age! Goodbye!" << std::endl;
+	}
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
