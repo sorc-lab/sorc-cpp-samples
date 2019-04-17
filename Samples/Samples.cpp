@@ -68,12 +68,21 @@ int main()
 	// Add guideline via right-click->Guidelines->Add Guideline (adds where cursor is)
 
 /** GIT SETTINGS */
+// TODO: This doc is missing the part where you set global config setting to commit with LF
+// and checkout with CRLF. This seems wrong and it should be turned OFF and the IDE or text
+// editor should be responsible for handling line endings. VS Code is set to LF and Visual
+// Studio 2019 is set to?... some place in  .editorconfig file. This file needs to be added
+// to the project and set to LF line endings and these config settings in the file will
+// override global VS editor config settings and can be shared, as it exists in the code repo.
+
 // # Remove everything from the index
-// $ git rm --cached - r .
+// $ git rm --cached -r .
 
 // # Re - add all the deleted files to the index
 // # You should get lots of messages like : "warning: CRLF will be replaced by LF in <file>."
-// $ git diff --cached --name - only - z | xargs - 0 git add
+// $ git diff --cached --name -only -z | xargs -0 git add
 
 // # Commit
 // $ git commit - m "Fix CRLF"
+
+// NOTE: Might make more sense to just use `git config --global core.whitespace cr-at-eol` to remove the ^M?
